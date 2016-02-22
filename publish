@@ -1,0 +1,9 @@
+#!/bin/sh
+cd /Users/gaspard/git/kegais.com
+harp compile . /Users/gaspard/git/gaspard.github.io
+cd /Users/gaspard/git/gaspard.github.io
+git add -A .
+git commit -m "Update"
+git push
+cd /Users/gaspard/git/kegais.com
+open http://gaspard.github.io
