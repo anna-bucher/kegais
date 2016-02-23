@@ -23,16 +23,6 @@
 				<!-- Header -->
 					<header id="header">
             <h1><a href="/"><strong><%= company %></strong></a></h1>
-						<!-- nav>
-							<ul>
-                <% for (var i = 0; i < menu.length; ++i )
-                   { var m = menu [ i ]
-                     var page = public.pages._data [ m ]
-                %>
-                <li><a href="/pages/<%= m %>" class="icon fa-info-circle"><%= page.title %></a></li>
-                <% } %>
-							</ul>
-						</nav -->
 						<nav>
 							<ul>
 								<li><a href="#footer" class="icon fa-info-circle">About</a></li>
@@ -94,12 +84,14 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="/assets/js/jquery.min.js"></script>
-			<script src="/assets/js/jquery.poptrox.min.js"></script>
-			<script src="/assets/js/skel.min.js"></script>
-			<script src="/assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="/assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="/assets/js/main.js"></script>
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/jquery.poptrox.min.js"></script>
+    <script src="/assets/js/skel.min.js"></script>
+    <script src="/assets/js/util.js"></script>
+    <!--[if lte IE 8]><script src="/assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="/assets/js/main.js"></script>
+
+    <%- partial ( '_analytics' ) %>
 
 	</body>
 </html>
