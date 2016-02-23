@@ -1,5 +1,16 @@
-{ "2016-02-22-kegais-gaspard-bucher":
-  { "title" : "Kegais."
-  , "description" : "Kegais is a word in a language that Gaspard Bucher is currently working on. This identity replaces Gaspard Buma (<a href='http://gaspardbuma.org'>gaspardbuma.org</a>) and bumagy (<a href='http://buma.squarespace.com'>buma.gy</a>). The websites for previous identities will be closed and archived."
+{ "2015-06-08-ray-marching-experiment-1":
+  { "title" : "ray marching experiment #1"
+  }
+, "2015-06-11-sobel-filter-experiment-1":
+  { "title" : "sobel filter experiment #1"
+  }
+, "2015-06-15-video-experiment-1":
+  { "title" : "video experiment #1"
+  }
+, "2015-09-16-anaglyph-experiment-1":
+  { "title" : "anaglyph experiment #1"
+  }
+, "2016-02-22-kegais-gaspard-bucher":
+  { "title" : "Kegais replaces Gaspard Buma"
   }
 }
