@@ -96,8 +96,18 @@
       btn.addEventListener
       ( "click"
       , function ()
-        { vid.muted = !vid.muted
+        {
+          vid.muted = !vid.muted
           btn.className = "icon fa-volume" + (vid.muted ? '-off' : '-up')
+        }
+      ) 
+      var vidplay = document.getElementById("vidplay")
+      vidplay.addEventListener
+      ( "click"
+      , function ()
+        {
+          vid.play ()
+          $('#bg').fadeOut ()
         }
       ) 
     </script>
