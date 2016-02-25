@@ -16,7 +16,6 @@
     <meta name="description" content="<%= description %>" />
 	</head>
 	<body>
-
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -25,6 +24,7 @@
             <h1><a href="/"><strong><%= company %></strong></a></h1>
 						<nav>
 							<ul>
+                <li><a id='vidpause' href="#" class='icon fa-volume-up'>Volume</a></li>
 								<li><a href="#footer" class="icon fa-info-circle">About</a></li>
 							</ul>
 						</nav>
@@ -90,6 +90,17 @@
     <script src="/assets/js/util.js"></script>
     <!--[if lte IE 8]><script src="/assets/js/ie/respond.min.js"></script><![endif]-->
     <script src="/assets/js/main.js"></script>
+    <script>
+      var vid = document.getElementById("bgvid")
+      var btn = document.getElementById("vidpause")
+      btn.addEventListener
+      ( "click"
+      , function ()
+        { vid.muted = !vid.muted
+          btn.className = "icon fa-volume" + (vid.muted ? '-off' : '-up')
+        }
+      ) 
+    </script>
 
     <%- partial ( '_analytics' ) %>
 
