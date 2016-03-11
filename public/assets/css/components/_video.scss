@@ -17,6 +17,17 @@
   @include fullback(-100);
 }
 
+#main > .full {
+  @include fullback(100);
+  background:none;
+  padding:1em;
+
+  iframe {
+    margin:auto;
+    display:table;
+  }
+}
+
 #bg {
   @include fullback(-99);
 

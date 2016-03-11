@@ -36,19 +36,19 @@
               <div id="bg">
                 <img src='/images/full/shiva.jpg'>
                 <div class='over'>
-                  <a href='#' id='vidplay' class='icon fa-play'>Play</a>
+                  <a href='/articles/2016-02-26-coming-soon' id='vidplay' class='icon fa-play'>Play</a>
                 </div>
               </div>
-            <% } else { %>
-              <div class='article'>
+              <% } else {
+                var article = public.articles._data [ current.source ] || { title: current.source }
+              
+              %>
+              <div class='<%= article.class || 'article' %>'>
                 <a class='closer' href='/'></a>
                 <h1>
-                  <%= current.source %>
+                  <%= article.title %>
                 </h1>
                 <%- yield %>
-              </div>
-              <div id="bg">
-                <img src='/images/full/shiva.jpg'>
               </div>
             <% } %>
 

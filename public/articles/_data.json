@@ -13,4 +13,11 @@
 , "2016-02-22-kegais-gaspard-bucher":
   { "title" : "Kegais replaces Gaspard Buma"
   }
+, "2016-02-26-coming-soon":
+  { "title" : "KEGAIS coming soon"
+  , "class" : "full"
+  }
+, "biography":
+  { "title" : "Biography"
+  }
 }
