@@ -32,7 +32,28 @@
 
 				<!-- Main -->
 					<div id="main">
-            <%- yield %>
+            <% if ( current.source == 'index' ) { %>
+              <%- yield %>
+              <video id="bgvid">
+                <source src="https://www.dropbox.com/s/5s84gmiqfy9ou1w/coming_soon_8k.mp4?raw=1" type="video/mp4">
+              </video>
+              <div id="bg">
+                <img src='/images/full/shiva.jpg'>
+                <div class='over'>
+                  <a href='#' id='vidplay' class='icon fa-play'>Play</a>
+                </div>
+              </div>
+            <% } else { %>
+              <div class='article'>
+                <a href="/" class="icon fa-times"><span class="label">Close</span></a>
+                <%- yield %>
+              </div>
+              <div id="bg">
+                <img src='/images/full/shiva.jpg'>
+              </div>
+            <% } %>
+
+
 					</div>
 
 				<!-- Footer -->
@@ -61,19 +82,25 @@
 							<div>
 								<section>
 									<h2>Get in touch</h2>
-									<form method="post" action="http://formspree.io/webform@kegais.com">
+                  <p><%- partial ( 'articles/_get_in_touch' ) %></p>
+
+                  <form method="post" action="http://buma.us7.list-manage1.com/subscribe/post">
+                    <input type="hidden" name="u" value="663f145e81e41ea52adda6c64">
+                    <input type="hidden" name="id" value="bfa0cf67b7">
 										<div class="field half first">
-											<input type="text" name="name" id="name" placeholder="Name" />
+											<input type="text" autocapitalize="off"
+                      autocorrect="off" name="MERGE1" id="MERGE1" placeholder="Name" />
 										</div>
 										<div class="field half">
-											<input type="text" name="_replyto" id="email" placeholder="Email" />
+											<input type="text" autocapitalize="off"
+                      autocorrect="off" name="MERGE0" id="MERGE0" placeholder="Email" />
 										</div>
 										<div class="field">
-											<textarea name="message" id="message" rows="4" placeholder="Message"></textarea>
+											<textarea name="MERGE3" id="MERGE3" rows="2" placeholder="Message"></textarea>
 										</div>
 										<ul class="actions">
-											<li><input type="submit" value="Send" class="special" /></li>
-											<li><input type="reset" value="Reset" /></li>
+											<li><input type="submit" value="Sign-up" class="special" /></li>
+											<!-- li><input type="reset" value="Reset" /></li -->
 										</ul>
 									</form>
 								</section>
@@ -102,14 +129,17 @@
         }
       ) 
       var vidplay = document.getElementById("vidplay")
-      vidplay.addEventListener
-      ( "click"
-      , function ()
-        {
-          vid.play ()
-          $('#bg').fadeOut ()
-        }
-      ) 
+      if ( vidplay )
+      {
+        vidplay.addEventListener
+        ( "click"
+        , function ()
+          {
+            vid.play ()
+            $('#bg').fadeOut ()
+          }
+        ) 
+      }
     </script>
 
     <%- partial ( '_analytics' ) %>
