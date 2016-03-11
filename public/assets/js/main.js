@@ -129,6 +129,12 @@
 
 						});
 
+          if ( window.location.hash == '#about' )
+          { 
+            $toggles.trigger ( 'click' )
+          }
+
+
 			});
 
 			// Global events.
