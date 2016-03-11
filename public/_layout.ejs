@@ -24,7 +24,6 @@
             <h1><a href="/"><strong><%= company %></strong></a></h1>
 						<nav>
 							<ul>
-                <li><a id='vidpause' href="#" class='icon fa-volume-up'>Volume</a></li>
 								<li><a href="#footer" class="icon fa-info-circle">About</a></li>
 							</ul>
 						</nav>
@@ -34,9 +33,6 @@
 					<div id="main">
             <% if ( current.source == 'index' ) { %>
               <%- yield %>
-              <video id="bgvid">
-                <source src="https://www.dropbox.com/s/5s84gmiqfy9ou1w/coming_soon_8k.mp4?raw=1" type="video/mp4">
-              </video>
               <div id="bg">
                 <img src='/images/full/shiva.jpg'>
                 <div class='over'>
@@ -121,16 +117,6 @@
     <!--[if lte IE 8]><script src="/assets/js/ie/respond.min.js"></script><![endif]-->
     <script src="/assets/js/main.js"></script>
     <script>
-      var vid = document.getElementById("bgvid")
-      var btn = document.getElementById("vidpause")
-      btn.addEventListener
-      ( "click"
-      , function ()
-        {
-          vid.muted = !vid.muted
-          btn.className = "icon fa-volume" + (vid.muted ? '-off' : '-up')
-        }
-      ) 
       var vidplay = document.getElementById("vidplay")
       if ( vidplay )
       {
@@ -138,7 +124,10 @@
         ( "click"
         , function ()
           {
-            vid.play ()
+            $('#main')
+            .prepend
+            ( '<iframe id="bgvid" src="https://player.vimeo.com/video/156813521?autoplay=1" width="80%" height="80%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen autoplay="1"></iframe>'
+            )
             $('#bg').fadeOut ()
           }
         ) 

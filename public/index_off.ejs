@@ -1,0 +1,14 @@
+<% 
+var articles = public.articles._contents
+for (var i = articles.length - 1; i > articles.length - maxarticles && i >= 0; --i )
+{ var a = articles [ i ].match(/^(.*)\.html$/)[ 1 ]
+  var article = public.articles._data [ a ] || { title: a, description: a }
+%>
+<article class="thumb">
+  <a href="/images/med/<%= a %>.jpg" class="image">
+    <img src="/images/thumb/<%= a %>.jpg" alt="" />
+  </a>
+  <h2><%= article.title %></h2>
+  <p><%- partial ( 'articles/' + a ) %></p>
+</article>
+<% } %>
