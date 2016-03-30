@@ -11,3 +11,10 @@ theatrical shows and solo performances shown in many festivals and galleries.
 He now dedicates all his time to KEGAIS and [lucidity](http://lucidity.io) with
 his company [lucidogen](http://lucidogen) located in the mountains of
 Valais in Switzerland.
+
+You can follow him:
+
+* [@omkegais](https://twitter.com/omkegais) (band related news)
+* [@feature_space](https://twitter.com/feature_space) (personal
+  experiments, researches, math, works in progress, etc)
+* [feature-space.com](http://feature-space.com) (personal blog)
